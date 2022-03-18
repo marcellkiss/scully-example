@@ -2,6 +2,44 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
+## Installation diary
+
+1.  Install @angular/cli, if you didn't yet: `npm install -g @angular/cli`
+2.  Run the command `ng new scully-example` to create a new angular project
+3.  Run `ng add @scullyio/init` to add scully to your project.
+
+You can choose from 3 different route renderers:
+
+- Scully platform server
+- Puppeteer
+- Playwright (beta)
+
+If you choose Scully platform server, the command installs the following packages:
+
+- @scullyio/init,
+- @scullyio/scully
+- @scullyio/ng-lib
+- @scullyio/platform-server
+- @angular/platform-server
+
+Latest stable version is @2.1.26 at the time of writing this line, which depends on @angular/platform-server@^12, which is not compatible with the latest @angular/animations@~13.2.0, so the execution of the schematics fails, and the scully.projectName.config.ts file doesn't get generated in contrast to the official guide.
+
+Choosing Puppeteer works fine. See tha changes in details:  
+https://github.com/marcellkiss/scully-example/commit/6e37e31d60baf010365d6bc5eb43faf6aee85adf
+
+4. Run `ng build` to build the project
+5. Run `npx scully` to serve the build
+   At this point, if everything went find, you should have a dist/static folder, next to your original build folder.
+   In this static folder, all the pages should be there, statically rendered. This is what you should host :)
+
+TODO: have a look at the plugins
+
+## Background
+
+[Jamstack](https://jamstack.org/) is on the rise, SSG is here to stay.
+
+Jamstack is the new standard architecture for the web. Using Git workflows and modern build tools, pre-rendered content is served to a CDN and made dynamic through APIs and serverless functions. Technologies in the stack include JavaScript frameworks, Static Site Generators, Headless CMSs, and CDNs.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
