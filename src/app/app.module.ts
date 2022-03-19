@@ -1,26 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ScullyLibModule } from '@scullyio/ng-lib';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
-import { HomeComponent } from './pages/home/home.component';
+import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { SettingsComponent } from './pages/settings/settings.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SettingsComponent,
-    MenuComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ScullyLibModule
-  ],
+  declarations: [AppComponent, SettingsComponent, ImpressumComponent],
+  imports: [BrowserModule, AppRoutingModule, ScullyLibModule, SharedModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

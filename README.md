@@ -28,7 +28,7 @@ Choosing Puppeteer works fine. See tha changes in details:
 https://github.com/marcellkiss/scully-example/commit/6e37e31d60baf010365d6bc5eb43faf6aee85adf
 
 4. Run `ng build` to build the project
-5. Run `npx scully` to serve the build
+5. Run `npx scully` to do SSG
    At this point, if everything went find, you should have a dist/static folder, next to your original build folder.
    In this static folder, all the pages should be there, statically rendered. You can test it by running eg. `http-server` in the `dist/static` folder or by simply running `npx scully serve`.
 
@@ -43,6 +43,16 @@ Scully is designed to take an app, analyze it, and then write out all the static
 
 Dynamic urls can't be statically rendered (eg. post/:postId) unless they are defined in the config file's `routes` parameter.
 With the `extraRoutes` parameter you can define routes, which are not defined in the Angular routes.
+
+### Creating a blog
+
+**Steps:**
+
+- `ng generate @scullyio/init:blog`  
+  Here you can overview the changes:  
+  https://github.com/marcellkiss/scully-example/commit/b6db95acbd5f3d634d6267a99a3ce36fc66ec037
+
+-
 
 ### TODO:
 
