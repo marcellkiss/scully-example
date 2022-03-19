@@ -30,9 +30,25 @@ https://github.com/marcellkiss/scully-example/commit/6e37e31d60baf010365d6bc5eb4
 4. Run `ng build` to build the project
 5. Run `npx scully` to serve the build
    At this point, if everything went find, you should have a dist/static folder, next to your original build folder.
-   In this static folder, all the pages should be there, statically rendered. This is what you should host :)
+   In this static folder, all the pages should be there, statically rendered. You can test it by running eg. `http-server` in the `dist/static` folder or by simply running `npx scully serve`.
 
-TODO: have a look at the plugins
+Tips:
+you don't need to rebuild the app, if you change just the scully parts (including markdowns, etc.). If you change scully parts, you have to re-execute the `npx scully` command, or you can use it in watch mode to automatically pick up the changes: `npx scully -- --watch`
+
+### Scully Process
+
+Scully is designed to take an app, analyze it, and then write out all the static files needed to represent the known (states/pages/routes) of the application.
+
+### Unhandled routes
+
+Dynamic urls can't be statically rendered (eg. post/:postId) unless they are defined in the config file's `routes` parameter.
+With the `extraRoutes` parameter you can define routes, which are not defined in the Angular routes.
+
+### TODO:
+
+- have a look at the plugins
+- check route parameters
+-
 
 ## Background
 
