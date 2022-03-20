@@ -52,7 +52,8 @@ With the `extraRoutes` parameter you can define routes, which are not defined in
   Here you can overview the changes:  
   https://github.com/marcellkiss/scully-example/commit/b6db95acbd5f3d634d6267a99a3ce36fc66ec037
 
--
+You can use `ScullyRouterService` to get the available links, like this: `this.scullyRouterService.available$.links$.subscribe(links => {...})`  
+Don't forget to use the --scanRoutes parameter if you change the routes (`npx scully --scanRoutes`). You can check the recognized routes also in the `scully-routes.json` file.
 
 ### TODO:
 

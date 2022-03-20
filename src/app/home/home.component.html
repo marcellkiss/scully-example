@@ -1,2 +1,5 @@
 <app-menu></app-menu>
-<p>home works!</p>
+<h3>Links</h3>
+<ul>
+  <li *ngFor="let page of links$ | async">{{ page.route }}</li>
+</ul>
