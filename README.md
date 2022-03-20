@@ -58,7 +58,10 @@ Don't forget to use the --scanRoutes parameter if you change the routes (`npx sc
 If you change md files, like metadata, you have to run `npx scully` again, to generate new data into the `scully-routes.json` file.
 This step is required to see up-to-date data during `ng serve`.
 
-Generate a post by running `ng generate @scullyio/init:post --name="This is my post"`
+Generate a post by running `ng generate @scullyio/init:post --name="This is my post"`.
+
+If published flag equals false, running `npx scully` will add an anonymous slug automatically, something like this: `___UNPUBLISHED___kao8mvda_pmldPr7aN7owPpStZiuDXFZ1ILfpcv5Z`. This results an anonymous, which you can share with your friend before publishing your post:  
+`http://localhost:1668/blog/___UNPUBLISHED___l0yxualt_zz806SgS9ergjseQAvshTMCD2oRfJnKO`
 
 ### TODO:
 

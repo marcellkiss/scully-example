@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
-import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -11,10 +10,6 @@ const routes: Routes = [
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent,
   },
   {
     path: 'impressum',
