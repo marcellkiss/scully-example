@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { SharedModule } from './shared/shared/shared.module';
+import { DynamicPageComponent } from './pages/dynamic-page/dynamic-page.component';
 
 @NgModule({
-  declarations: [AppComponent, ImpressumComponent],
+  declarations: [AppComponent, ImpressumComponent, DynamicPageComponent],
   imports: [BrowserModule, AppRoutingModule, ScullyLibModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],

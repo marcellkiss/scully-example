@@ -1,12 +1,13 @@
 <app-menu></app-menu>
 <h1>Posts</h1>
+<br />
 
 <div class="post" *ngFor="let page of links$ | async">
-  <h3>{{ page.title }}</h3>
-  <p>
-    {{ page["description"] }}
-  </p>
-  <a [routerLink]="[page.route]">Link</a>
+  <div class="title">{{ page.title }}</div>
+
+  <div class="description">{{ page["description"] }}</div>
+
+  <a [routerLink]="[page.route]">Read more</a>
 </div>
 
 <br />

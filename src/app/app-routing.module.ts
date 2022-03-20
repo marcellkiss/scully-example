@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DynamicPageComponent } from './pages/dynamic-page/dynamic-page.component';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 
 const routes: Routes = [
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'impressum',
     component: ImpressumComponent,
+  },
+  {
+    path: 'dynamic-page/:id',
+    component: DynamicPageComponent,
   },
 ];
 
