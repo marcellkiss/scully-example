@@ -63,6 +63,8 @@ Generate a post by running `ng generate @scullyio/init:post --name="This is my p
 If published flag equals false, running `npx scully` will add an anonymous slug automatically, something like this: `___UNPUBLISHED___kao8mvda_pmldPr7aN7owPpStZiuDXFZ1ILfpcv5Z`. This results an anonymous, which you can share with your friend before publishing your post:  
 `http://localhost:1668/blog/___UNPUBLISHED___l0yxualt_zz806SgS9ergjseQAvshTMCD2oRfJnKO`
 
+A big drawback: you won't be able to view the posts just by running `ng serve`
+
 ### TODO:
 
 - have a look at the plugins
