@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && scully",
+    "build": "ng build",
+    "build:none": "echo 'it was built locally'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "jam": "ng build && npx scully --scanRoutes",

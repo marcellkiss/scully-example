@@ -1,14 +1,18 @@
 <app-menu></app-menu>
-<h3>Links</h3>
-<ul>
-  <li *ngFor="let page of links$ | async">{{ page.route }}</li>
-</ul>
+<h1>Posts</h1>
 
-<ul>
-  <li *ngFor="let page of links$ | async">
-    {{ page | json }}
-    <span *ngFor="let arrayItem of page['arbitraryArray']">
-      {{ arrayItem }}
-    </span>
-  </li>
-</ul>
+<div class="post" *ngFor="let page of links$ | async">
+  <h3>{{ page.title }}</h3>
+  <p>
+    {{ page["description"] }}
+  </p>
+  <a [routerLink]="[page.route]">Link</a>
+</div>
+
+<br />
+<br />
+<br />
+<h4>Debug metadata of blog posts</h4>
+<div *ngFor="let page of links$ | async">
+  <pre>{{ page | json }}</pre>
+</div>
