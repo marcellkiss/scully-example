@@ -53,7 +53,12 @@ With the `extraRoutes` parameter you can define routes, which are not defined in
   https://github.com/marcellkiss/scully-example/commit/b6db95acbd5f3d634d6267a99a3ce36fc66ec037
 
 You can use `ScullyRouterService` to get the available links, like this: `this.scullyRouterService.available$.links$.subscribe(links => {...})`  
-Don't forget to use the --scanRoutes parameter if you change the routes (`npx scully --scanRoutes`). You can check the recognized routes also in the `scully-routes.json` file.
+Don't forget to use the --scanRoutes parameter if you change the routes (`npx scully --scanRoutes`). You can check the recognized routes also in the `src/assets/scully-routes.json` file.
+
+If you change md files, like metadata, you have to run `npx scully` again, to generate new data into the `scully-routes.json` file.
+This step is required to see up-to-date data during `ng serve`.
+
+Generate a post by running `ng generate @scullyio/init:post --name="This is my post"`
 
 ### TODO:
 
