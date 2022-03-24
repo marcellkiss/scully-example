@@ -65,12 +65,6 @@ If published flag equals false, running `npx scully` will add an anonymous slug 
 
 A big drawback: you won't be able to view the posts just by running `ng serve`. `<scully-content>` component works just after scully rendering.
 
-### TODO:
-
-- have a look at the plugins
-- check route parameters
--
-
 ## Background
 
 [Jamstack](https://jamstack.org/) is on the rise, SSG is here to stay.
