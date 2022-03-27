@@ -15,7 +15,7 @@ function dynamicPagePlugin(
   config = {}
 ): Promise<HandledRoute[]> {
   console.log(`[dynamicPagePlugin]`, route, config);
-  return Promise.resolve([{ route: '/dynamic-page/xxx' }]);
+  return Promise.resolve([{ route: '/dynamic-page/9999' }]);
 }
 
 registerPlugin('router', 'dynamicPagePlugin', dynamicPagePlugin, validator);
