@@ -8,7 +8,7 @@
     "build:none": "echo 'it was built locally'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "jam": "ng build && npx scully --scanRoutes",
+    "jam": "rm -rf dist && ng build && npx scully --scanRoutes",
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --"
   },
