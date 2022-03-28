@@ -1,19 +1,23 @@
 <app-menu></app-menu>
-<h1>Posts</h1>
+<!-- <h1>Posts</h1> -->
 <br />
+<br />
+<div class="blog-posts">
+  <div class="post" *ngFor="let page of links$ | async">
+    <img [src]="page['coverImageUrl']" alt="" class="cover-image" />
 
-<div class="post" *ngFor="let page of links$ | async">
-  <div class="title">{{ page.title }}</div>
+    <div class="title">{{ page.title }}</div>
 
-  <div class="description">{{ page["description"] }}</div>
+    <div class="description">{{ page["description"] }}</div>
 
-  <a [routerLink]="[page.route]">Read more</a>
+    <a [routerLink]="[page.route]" class="post-link">Read more</a>
+  </div>
 </div>
 
 <br />
 <br />
 <br />
-<h4>Debug metadata of blog posts</h4>
+<!-- <h4>Debug metadata of blog posts</h4>
 <div *ngFor="let page of links$ | async">
   <pre>{{ page | json }}</pre>
-</div>
+</div> -->

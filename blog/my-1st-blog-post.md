@@ -1,6 +1,10 @@
 ---
 title: My very first post
-description: Here we have some description
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a magna
+laoreet, convallis quam sed, eleifend nisl. Duis non eros velit. Mauris velit
+purus, ullamcorper quis ex vel, iaculis gravida sapien."
+coverImageUrl: /assets/images/blog-covers/forest.jpg
+author: Marcell Kiss
 published: true
 arbitraryValue: someParameterWeNeed
 arbitraryArray: [first, second, third]
